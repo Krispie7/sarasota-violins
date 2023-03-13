@@ -1,0 +1,19 @@
+:root{
+    --maroon: #6F1D1B;
+    --beige: #BB9457;
+    --dark-brown: #432818;
+    --brown:#99582A;
+    --skin: #FFE6A7;
+    margin:0;
+    padding:0;
+}
+
+body{
+    margin:0;
+}
+.navbarContainer{
+    background-color:maroon;
+    width:100vw;
+    color:white;
+    position:fixed;
+}
