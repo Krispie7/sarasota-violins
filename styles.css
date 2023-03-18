@@ -1,19 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
 :root{
     --maroon: #6F1D1B;
     --beige: #BB9457;
     --dark-brown: #432818;
     --brown:#99582A;
     --skin: #FFE6A7;
+    --gray:#a7a7a7;
     margin:0;
     padding:0;
+    font-family: 'Playfair Display', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    --navbar-height:12vh;
 }
 
 body{
     margin:0;
+    padding:0;
 }
+
 .navbarContainer{
-    background-color:maroon;
-    width:100vw;
+    top:0;
+    left:0;
+    right:0;
+    background-color:var(--maroon);
     color:white;
     position:fixed;
+    display:grid;
+    height:var(--navbar-height);
+    justify-content: space-between;
+    grid-auto-flow: column;
+    grid-template-columns: repeat(2, auto);
+    box-shadow: #000000 0px 0px 15px .5px;
+    align-content: center;
+    overflow: hidden;
+}
+
+#logoContainer{
+    display:flex;
+    max-height: 100%;
+    width:20vw;
+    justify-content: center;
+    align-items: center;
+}
+
+#logo{
+    height:100%;
+    background:url(sarasota-violins-logo.jpg);
+    width:100%;
+    background-size:cover;
+    background-position:center;
+}
+
+.navbar{
+    justify-self:flex-end;
+    display:grid;
+    grid-auto-flow: column;
+    grid-gap:1.5rem;
+    align-items: center;
+    justify-items: center;
+    margin: 0rem 2rem;
+}
+
+.navbarButtons{
+    display:block;
+}
+
+#menuButton{
+    display:none;
+    text-align: center;
+    width: 3rem;
+    height:3rem;
+    padding:1.5rem 0rem;
+    color:black;
+    font-size:2rem;
+    line-height: 3rem;
+}
+
+/*PAGE CONTENT */
+
+#frontImageContainer{
+    display:flex;
+    margin-top:var(--navbar-height);
+}
+
+.frontImage{
+    background-size:cover;
+    background-position:center;
+    height:auto;
+    width:100%;
+}
+
+/* FOOTER */
+
+#footerContainer{
+    background-color: var(--gray);
+    padding: 1rem 0rem;
+}
+
+#informationContainer{
+    display:grid;
+    align-items: center;
+    justify-content: center;
+}
+
+/* MEDIA QUERIES*/
+@media (max-width:600px){
+
+    .navbarButtons{
+        display:none;
+    }
+
+    #menuButton{
+        display:inline-block;
+    }
+
+    .navbar{
+        margin:0rem .5rem;
+    }
 }
