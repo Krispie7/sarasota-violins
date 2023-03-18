@@ -13,6 +13,11 @@
     --navbar-height:12vh;
 }
 
+a:link, a:hover, a:visited, a:active{
+    color:white;
+    text-decoration: none;
+}
+
 body{
     margin:0;
     padding:0;
@@ -45,7 +50,7 @@ body{
 
 #logo{
     height:100%;
-    background:url(sarasota-violins-logo.jpg);
+    background:url(./images/sarasota-violins-logo.jpg);
     width:100%;
     background-size:cover;
     background-position:center;
@@ -78,9 +83,12 @@ body{
 
 /*PAGE CONTENT */
 
+#navbarFiller{
+    height:var(--navbar-height);
+}
+
 #frontImageContainer{
     display:flex;
-    margin-top:var(--navbar-height);
 }
 
 .frontImage{
@@ -101,6 +109,21 @@ body{
     display:grid;
     align-items: center;
     justify-content: center;
+}
+
+#contact:hover{
+    color:black;
+}
+
+/*Instruments Page*/
+
+h1{
+    text-align: center;
+}
+
+#instrumentsButtonContainer{
+    display:grid;
+    grid-auto-flow: column;
 }
 
 /* MEDIA QUERIES*/
