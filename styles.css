@@ -35,7 +35,7 @@ body{
     justify-content: space-between;
     grid-auto-flow: column;
     grid-template-columns: repeat(2, auto);
-    box-shadow: #000000 0px 0px 15px .5px;
+    box-shadow: #000000 0px 0px 5px .5px;
     align-content: center;
     overflow: hidden;
 }
@@ -121,9 +121,23 @@ h1{
     text-align: center;
 }
 
-#instrumentsButtonContainer{
+#instrumentsButtonsContainer{
     display:grid;
     grid-auto-flow: column;
+    grid-gap:1.5rem;
+    margin:2rem 5rem;
+}
+
+.instrumentButton{
+    background-color:transparent;
+    border:none;
+    height:2rem;
+    font-size:1.5rem;
+}
+
+#instrumentsContainer{
+    display:grid;
+    margin:2rem 5rem;
 }
 
 /* MEDIA QUERIES*/
