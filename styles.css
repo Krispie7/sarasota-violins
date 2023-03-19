@@ -10,7 +10,8 @@
     margin:0;
     padding:0;
     font-family: 'Playfair Display', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    --navbar-height:12vh;
+    --navbar-height:20vh;
+    --navbar-height-mobile:15vh;
 }
 
 a:link, a:hover, a:visited, a:active{
@@ -20,44 +21,50 @@ a:link, a:hover, a:visited, a:active{
 
 body{
     margin:0;
-    padding:0;
 }
 
-.navbarContainer{
+#exclaimer{
+    color:red;
+    font-size:3rem;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    text-align:center;
+}
+
+#navbarContainer{
     top:0;
     left:0;
     right:0;
     background-color:var(--maroon);
     color:white;
     position:fixed;
-    display:grid;
+    display:flex;
     height:var(--navbar-height);
-    justify-content: space-between;
-    grid-auto-flow: column;
-    grid-template-columns: repeat(2, auto);
     box-shadow: #000000 0px 0px 5px .5px;
-    align-content: center;
+    align-items: flex-start;
     overflow: hidden;
+    transition: 300ms ease;
+    justify-content: space-between;
+    flex-wrap:wrap;
+    z-index:100;
 }
 
 #logoContainer{
     display:flex;
-    max-height: 100%;
+    max-height: var(--navbar-height);
     width:20vw;
-    justify-content: center;
     align-items: center;
 }
 
 #logo{
-    height:100%;
-    background:url(./images/sarasota-violins-logo.jpg);
-    width:100%;
-    background-size:cover;
-    background-position:center;
+    height:var(--navbar-height);
+    transition: 300ms ease;
 }
 
-.navbar{
-    justify-self:flex-end;
+#navbar{
+    height:var(--navbar-height);
     display:grid;
     grid-auto-flow: column;
     grid-gap:1.5rem;
@@ -68,23 +75,35 @@ body{
 
 .navbarButtons{
     display:block;
+    font-size:1.3rem;
 }
 
-#menuButton{
+.menuButton{
     display:none;
     text-align: center;
     width: 3rem;
-    height:3rem;
-    padding:1.5rem 0rem;
+    height:var(--navbar-height);
     color:black;
     font-size:2rem;
-    line-height: 3rem;
+    line-height:var(--navbar-height);
+    margin: 0rem .5rem;
+}
+
+#openMenuButton{
+    display:none;
+}
+
+#closeMenuButton{
+    display: none;
+    height:var(--navbar-height-mobile);
+    line-height:var(--navbar-height-mobile);
 }
 
 /*PAGE CONTENT */
 
 #navbarFiller{
     height:var(--navbar-height);
+    transition: 300ms ease;
 }
 
 #frontImageContainer{
@@ -147,11 +166,44 @@ h1{
         display:none;
     }
 
-    #menuButton{
-        display:inline-block;
+    #navbarContainer{
+        height:var(--navbar-height-mobile);
     }
 
-    .navbar{
+    #navbarFiller{
+        height:var(--navbar-height-mobile);
+    }
+
+    #navbar{
+        height:100%;
         margin:0rem .5rem;
+        grid-auto-flow:row;
+        width:100%;
+        height:auto;
+        order:3;
+    }
+
+    #logoContainer{
+        max-height: var(--navbar-height);
+    }
+
+    #logo{
+        height:var(--navbar-height-mobile);
+    }
+
+    #openMenuButton{
+        display:block;
+        height:var(--navbar-height-mobile);
+        line-height:var(--navbar-height-mobile);
+    }
+
+    #closeMenuButton{
+        display:none;
+    }
+}
+
+@media (min-width:600px){
+    #closeMenuButton{
+        display:none;
     }
 }

@@ -10,11 +10,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
 </head>
 <body>
-    <div class="navbarContainer">
+    <div id="navbarContainer">
             <a href="home.html" id="logoContainer">
-                <div id="logo" class="image"></div>
+                <img src="images/sarasota-violins-logo.jpg" alt="Store Logo" id="logo">
             </a>
-        <div class="navbar">
+        <div id="navbar">
             <a href="instruments.html">
                 <div class="navbarButtons">Instruments</div>
             </a>
@@ -22,8 +22,9 @@
                 <div class="navbarButtons">Contact</div>
             </a>
             <div class="navbarButtons">About Us</div>
-            <i class="navbarButtons fa-solid fa-bars" id="menuButton"></i>
         </div>
+        <i class="fa-solid fa-bars menuButton" id="openMenuButton"></i>
+        <i class="fa-regular fa-x menuButton" id="closeMenuButton"></i>
     </div>
     <div id="navbarFiller"></div>
 
@@ -40,6 +41,8 @@
             </a>
         </div>
     </div>
+
+    <h1 id="exclaimer">More Coming Soon <br> Check back for updates</h1>
 
 </body>
 </html>

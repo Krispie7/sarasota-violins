@@ -10,28 +10,30 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
 </head>
 <body>
-    <div class="navbarContainer">
+    <div id="navbarContainer">
         <a href="home.html" id="logoContainer">
-            <div id="logo" class="image"></div>
+            <img src="images/sarasota-violins-logo.jpg" alt="Store Logo" id="logo">
         </a>
-        <div class="navbar">
-            <a href="instruments.html">
-                <div class="navbarButtons">Instruments</div>
-            </a>
-            <a href="./home.html#contact">
-                <div class="navbarButtons">Contact</div>
-            </a>
-            <div class="navbarButtons">About Us</div>
-        <i class="navbarButtons fa-solid fa-bars" id="menuButton"></i>
+    <div id="navbar">
+        <a href="instruments.html">
+            <div class="navbarButtons">Instruments</div>
+        </a>
+        <a href="#contact">
+            <div class="navbarButtons">Contact</div>
+        </a>
+        <div class="navbarButtons">About Us</div>
     </div>
-    </div>
-    <div id="navbarFiller"></div>
+    <i class="fa-solid fa-bars menuButton" id="openMenuButton"></i>
+    <i class="fa-regular fa-x menuButton" id="closeMenuButton"></i>
+</div>
+<div id="navbarFiller"></div>
+
     <h1 id="instrumentsTitle">Instruments</h1>
     <div id="instrumentsButtonsContainer">
-        <button class="instrumentButton">Violins</button>
-        <button class="instrumentButton">Violas</button>
-        <button class="instrumentButton">Cellos</button>
-        <button class="instrumentButton">Basses</button>
+        <button class="instrumentButtons">Violins</button>
+        <button class="instrumentButtons">Violas</button>
+        <button class="instrumentButtons">Cellos</button>
+        <button class="instrumentButtons">Basses</button>
     </div>
 
     <div id="instrumentsContainer">
