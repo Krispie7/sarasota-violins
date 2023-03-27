@@ -16,7 +16,7 @@ windowSize.addListener(mediaQuery)
 
 function openMenu () {
     /*make navbar bigger*/
-    navbarContainer.style.height="50vh"
+    navbarContainer.style.height="37vh"
 
     /*show menuButtons*/
     for (let i = 0; i<navbarButtons.length; i++){

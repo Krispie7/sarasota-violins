@@ -21,6 +21,10 @@ a:link, a:hover, a:visited, a:active{
 
 body{
     margin:0;
+    min-height:100vh;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #exclaimer{
@@ -120,8 +124,10 @@ body{
 /* FOOTER */
 
 #footerContainer{
+    margin-top: auto;
     background-color: var(--gray);
     padding: 1rem 0rem;
+    width:100vw;
 }
 
 #informationContainer{
@@ -157,6 +163,16 @@ h1{
 #instrumentsContainer{
     display:grid;
     margin:2rem 5rem;
+}
+
+/*About Us Page */
+
+p.aboutUs{
+    max-width:40rem;
+}
+
+.aboutUs{
+    text-align: center;
 }
 
 /* MEDIA QUERIES*/
