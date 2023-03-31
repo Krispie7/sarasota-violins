@@ -4,9 +4,9 @@ const openMenuButton= document.getElementById('openMenuButton')
 const closeMenuButton= document.getElementById('closeMenuButton')
 const navbarContainer = document.getElementById('navbarContainer')
 const navbarButtons = document.getElementsByClassName('navbarButtons')
-const navbarHeightMobile= getComputedStyle(document.querySelector(":root")).getPropertyValue("--navbar-height-mobile")
+const navbarHeightDesktop= getComputedStyle(document.querySelector(":root")).getPropertyValue("--navbar-height-desktop")
 const navbarHeight =getComputedStyle(document.querySelector(":root")).getPropertyValue("--navbar-height")
-let windowSize= window.matchMedia("(min-width: 600px)")
+let windowSize= window.matchMedia("(min-width: 1000px)")
 
 console.log(navbarButtons)
 
@@ -34,7 +34,7 @@ function openMenu () {
 
 function closeMenu() {
     /*make navbar small*/
-    navbarContainer.style.height=navbarHeightMobile
+    navbarContainer.style.height=navbarHeightDesktop
 
     /*hide menuButtons*/
     for (let i = 0; i<navbarButtons.length; i++){
@@ -47,10 +47,10 @@ function closeMenu() {
     /*hide closeMenuButton*/
     closeMenuButton.style.display="none"
 }
-
+/*
 function mediaQuery(){
     if (windowSize.matches) { // If media query matches
-        navbarContainer.style.height=navbarHeight
+        navbarContainer.style.height=navbarHeightDesktop
         closeMenuButton.style.display="none"
         openMenuButton.style.display="none"
         for (let i = 0; i<navbarButtons.length; i++){
@@ -58,7 +58,7 @@ function mediaQuery(){
         }
 
       } else {
-        navbarContainer.style.height=navbarHeightMobile
+        navbarContainer.style.height=navbarHeight
         openMenuButton.style.display="block"
       }
 }

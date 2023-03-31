@@ -42,7 +42,7 @@ body{
 #navbarContainer{
     display:flex;
     height:var(--navbar-height);
-    width:100vw;
+    width:100%;
     top:0;
     left:0;
     right:0;
@@ -72,7 +72,7 @@ body{
 
 #navbar{
     height:var(--navbar-height);
-    display:none;
+    display:grid;
     grid-auto-flow: column;
     grid-gap:1.5rem;
     align-items: center;
@@ -82,7 +82,6 @@ body{
 
 .navbarButtons{
     display:none;
-    font-size:1.3rem;
 }
 
 .menuButton{
@@ -114,31 +113,38 @@ body{
     transition: 300ms ease;
 }
 
-#ImageContainer{
+#imageContainer{
+    margin-top:.5rem;
     display:grid;
-    width:100vw;
-    grid-auto-flow: column;
+    grid-auto-flow: row;
+    align-content:center;
+    grid-gap:.5rem;
 }
 
 .imageScene{
     background-size:cover;
     background-position:center;
     height:auto;
-    width:100%;
+    width:min(1000px, 100vw);
 }
 
 /*BROWSE PRODUCTS */
 
+.abc{
+    width:100%
+}
+
 #browseProducts{
-    margin:1rem 0rem;
+    margin:1rem 1rem;
     display:grid;
-    width:100vw;
-    grid-template-columns: repeat(auto-fit, minmax(40vw, 1fr));
+    width:min(1300px, 95%);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     justify-items: center;
+    grid-gap:1rem;
 }
 
 .homeProducts{
-    width:45vw;
+    width:100%;
     height:15rem;
     object-fit: cover;
     object-position: center;
@@ -151,7 +157,7 @@ body{
     background-color:#FFE6A7;
     line-height: 2rem;
     padding:0rem 0rem 0rem .5rem;
-    transform: translate(0%, -100%);
+    transform: translate(0%, -12.5%);
 }
 
 /*ABOUT US */
@@ -159,6 +165,7 @@ body{
 #aboutUsHome{
     margin:1rem 1rem;
     text-align: center;
+    width:min(800px, 95vw)
 }
 
 /* FOOTER */
@@ -167,7 +174,7 @@ body{
     margin-top: auto;
     background-color: var(--gray);
     padding: 1rem 0rem;
-    width:100vw;
+    width:100%;
 }
 
 #informationContainer{
@@ -216,52 +223,63 @@ p.aboutUs{
 }
 
 /* MEDIA QUERIES*/
-/*
-@media (max-width:600px){
+
+@media (max-width:350px){
+
+}
+
+@media (min-width:600px){
+
+}
+@media (min-width:800px){
+
+}
+
+@media(min-width:1000px){
 
     .navbarButtons{
-        display:none;
+        display:block;
     }
 
     #navbarContainer{
-        height:var(--navbar-height-mobile);
+        height:var(--navbar-height-desktop);
     }
 
     #navbarFiller{
-        height:var(--navbar-height-mobile);
+        height:var(--navbar-height-desktop);
     }
 
     #navbar{
-        height:100%;
+        height:var(--navbar-height-desktop);
         margin:0rem .5rem;
-        grid-auto-flow:row;
-        width:100%;
-        height:auto;
+        grid-auto-flow:column;
         order:3;
     }
 
     #logoContainer{
-        max-height: var(--navbar-height);
+        max-height: var(--navbar-height-desktop);
     }
 
     #logo{
-        height:var(--navbar-height-mobile);
+        height:var(--navbar-height-desktop);
     }
 
     #openMenuButton{
-        display:block;
-        height:var(--navbar-height-mobile);
-        line-height:var(--navbar-height-mobile);
+        display:none;
     }
 
     #closeMenuButton{
         display:none;
     }
+
 }
 
-@media (min-width:600px){
-    #closeMenuButton{
-        display:none;
+@media(min-width:1200px){
+    #imageContainer{
+        grid-auto-flow: column;
+    }
+    .imageScene{
+        width:max(600px, 45vw);
     }
 }
 
