@@ -10,8 +10,8 @@
     margin:0;
     padding:0;
     font-family: 'Playfair Display', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    --navbar-height:20vh;
-    --navbar-height-mobile:15vh;
+    --navbar-height:15vh;
+    --navbar-height-desktop:6rem;
 }
 
 a:link, a:hover, a:visited, a:active{
@@ -37,15 +37,18 @@ body{
     text-align:center;
 }
 
+/* NAVBAR */
+
 #navbarContainer{
+    display:flex;
+    height:var(--navbar-height);
+    width:100vw;
     top:0;
     left:0;
     right:0;
     background-color:var(--maroon);
     color:white;
     position:fixed;
-    display:flex;
-    height:var(--navbar-height);
     box-shadow: #000000 0px 0px 5px .5px;
     align-items: flex-start;
     overflow: hidden;
@@ -69,7 +72,7 @@ body{
 
 #navbar{
     height:var(--navbar-height);
-    display:grid;
+    display:none;
     grid-auto-flow: column;
     grid-gap:1.5rem;
     align-items: center;
@@ -78,12 +81,11 @@ body{
 }
 
 .navbarButtons{
-    display:block;
+    display:none;
     font-size:1.3rem;
 }
 
 .menuButton{
-    display:none;
     text-align: center;
     width: 3rem;
     height:var(--navbar-height);
@@ -94,31 +96,69 @@ body{
 }
 
 #openMenuButton{
-    display:none;
+    display:block;
 }
 
 #closeMenuButton{
     display: none;
-    height:var(--navbar-height-mobile);
-    line-height:var(--navbar-height-mobile);
+    height:var(--navbar-height);
+    line-height:var(--navbar-height);
 }
 
-/*PAGE CONTENT */
+/*HOME PAGE CONTENT */
+
+/* SCENE */
 
 #navbarFiller{
     height:var(--navbar-height);
     transition: 300ms ease;
 }
 
-#frontImageContainer{
-    display:flex;
+#ImageContainer{
+    display:grid;
+    width:100vw;
+    grid-auto-flow: column;
 }
 
-.frontImage{
+.imageScene{
     background-size:cover;
     background-position:center;
     height:auto;
     width:100%;
+}
+
+/*BROWSE PRODUCTS */
+
+#browseProducts{
+    margin:1rem 0rem;
+    display:grid;
+    width:100vw;
+    grid-template-columns: repeat(auto-fit, minmax(40vw, 1fr));
+    justify-items: center;
+}
+
+.homeProducts{
+    width:45vw;
+    height:15rem;
+    object-fit: cover;
+    object-position: center;
+}
+
+.homeProductDescription{
+    position: relative;
+    color:black;
+    height:2rem;
+    background-color:#FFE6A7;
+    line-height: 2rem;
+    padding:0rem 0rem 0rem .5rem;
+    transform: translate(0%, -100%);
+}
+
+/*ABOUT US */
+
+#aboutUsHome{
+    margin:1rem 1rem;
+    text-align: center;
 }
 
 /* FOOTER */
@@ -141,7 +181,7 @@ body{
 }
 
 /*Instruments Page*/
-
+/*
 h1{
     text-align: center;
 }
@@ -166,7 +206,7 @@ h1{
 }
 
 /*About Us Page */
-
+/*
 p.aboutUs{
     max-width:40rem;
 }
@@ -176,6 +216,7 @@ p.aboutUs{
 }
 
 /* MEDIA QUERIES*/
+/*
 @media (max-width:600px){
 
     .navbarButtons{
@@ -223,3 +264,4 @@ p.aboutUs{
         display:none;
     }
 }
+
