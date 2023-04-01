@@ -224,7 +224,7 @@ h1{
     margin:1rem 1rem;
     display:grid;
     width:min(1300px, 95%);
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     justify-items: center;
     grid-gap:1rem;
 }
@@ -237,13 +237,19 @@ h1{
 }
 
 .productDescription{
+    display:flex;
     position: relative;
     color:black;
-    height:2rem;
+    height:4rem;
     background-color:#FFE6A7;
     line-height: 2rem;
     padding:0rem 0rem 0rem .5rem;
     transform: translate(0%, -100%);
+}
+
+.price{
+    display:inline;
+    font-size:.5rem;
 }
 
 /*About Us Page */
