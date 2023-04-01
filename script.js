@@ -6,7 +6,7 @@ const navbarContainer = document.getElementById('navbarContainer')
 const navbarButtons = document.getElementsByClassName('navbarButtons')
 const navbarHeightDesktop= getComputedStyle(document.querySelector(":root")).getPropertyValue("--navbar-height-desktop")
 const navbarHeight =getComputedStyle(document.querySelector(":root")).getPropertyValue("--navbar-height")
-let windowSize= window.matchMedia("(min-width: 1000px)")
+let windowSize= window.matchMedia("(min-width: 100px)")
 
 console.log(navbarButtons)
 
@@ -47,7 +47,7 @@ function closeMenu() {
     /*hide closeMenuButton*/
     closeMenuButton.style.display="none"
 }
-/*
+
 function mediaQuery(){
     if (windowSize.matches) { // If media query matches
         navbarContainer.style.height=navbarHeightDesktop
