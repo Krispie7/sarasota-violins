@@ -46,7 +46,7 @@ body{
     top:0;
     left:0;
     right:0;
-    background-color:white;
+    background-color:var(--beige);
     position:fixed;
     box-shadow: #000000 0px 0px 5px .5px;
     align-items: flex-start;
@@ -81,7 +81,7 @@ body{
 
 .navbarButtons{
     display:none;
-    color:var(--maroon);
+    color:black;
 }
 
 .menuButton{
@@ -136,13 +136,20 @@ body{
     width:100%
 }
 
+div.abc{
+    background-color:var(--maroon);
+    position:relative;
+    z-index:-1;
+}
+
 #browseProducts{
-    margin:1rem 1rem;
+    margin:.7rem;
     display:grid;
     width:min(1300px, 95%);
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     justify-items: center;
     grid-gap:1rem;
+    padding:.3rem;
 }
 
 .homeProducts{
