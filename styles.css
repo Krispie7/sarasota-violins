@@ -291,10 +291,15 @@ p.aboutUs{
     grid-area:1/2/2/3
 }
 
+/* CONTACT PAGE */
+
+#contactPage{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 /* MEDIA QUERIES*/
-
-
 
 @media(min-width:1000px){
 
