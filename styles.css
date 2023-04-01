@@ -58,7 +58,7 @@ body{
     transition: 300ms ease;
     justify-content: space-between;
     flex-wrap:wrap;
-    z-index:100;
+    z-index:10;
 }
 
 #logoContainer{
@@ -234,6 +234,7 @@ h1{
     height:25rem;
     object-fit: cover;
     object-position: center;
+    cursor:pointer;
 }
 
 .productDescription{
@@ -250,6 +251,39 @@ h1{
 .price{
     display:inline;
     font-size:.5rem;
+}
+
+#imageCollection{
+    display:none;
+    position:fixed;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    z-index:12;
+    grid-auto-flow: column;
+    grid-gap:1rem;
+    scale:0;
+    transition:600ms ease;
+}
+
+#overlay{
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background-color: rgb(0, 0, 0, .55);
+    z-index:11;
+    scale:0;
+    transition:600ms ease;
+}
+
+.productImageContainer{
+    width:100%;
+    max-height:60vh;
+    object-fit: cover;
+    object-position: center;
 }
 
 /*About Us Page */
