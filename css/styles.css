@@ -23,6 +23,10 @@ h2{
     text-align:center;
 }
 
+p{
+    margin:.75rem;
+}
+
 body{
     margin:0;
     min-height:100vh;
