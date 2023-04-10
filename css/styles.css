@@ -54,7 +54,7 @@ body{
     top:0;
     left:0;
     right:0;
-    background-color:var(--beige);
+    background-color:var(--skin);
     position:fixed;
     box-shadow: #000000 0px 0px 5px .5px;
     align-items: flex-start;
