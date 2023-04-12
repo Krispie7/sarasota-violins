@@ -185,6 +185,23 @@ div.abc{
     width:min(800px, 95vw)
 }
 
+/* Gallery */
+
+#galleryGrid{
+    max-width:90vw;
+    height:100%;
+    display:grid;
+    grid-template-columns:1fr;
+    margin:1.5rem;
+    grid-gap:1rem;
+    box-sizing:border-box;
+}
+
+#galleryGrid img{
+    width:100%;
+    height:100%;
+}
+
 /* FOOTER */
 
 #footerContainer{
@@ -386,6 +403,9 @@ p.aboutUs{
         display:none;
     }
 
+    #galleryGrid{
+        grid-template-columns:1fr 1fr;
+    }
 }
 
 @media(min-width:1200px){
