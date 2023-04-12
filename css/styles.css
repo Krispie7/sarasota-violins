@@ -189,7 +189,7 @@ div.abc{
 
 #footerContainer{
     margin-top: auto;
-    background-color: var(--beige);
+    background-color: var(--skin);
     padding: 1rem 0rem;
     width:100%;
 }
@@ -202,6 +202,10 @@ div.abc{
 
 #contact:hover{
     color:black;
+}
+
+#hoursList{
+    list-style-type:none;
 }
 
 /*Instruments Page*/
