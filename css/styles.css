@@ -238,6 +238,11 @@ h1{
     text-align: center;
 }
 
+#instrumentsPageContainer{
+    width:100%;
+    margin-bottom: 5rem;
+}
+
 #instrumentsButtonsContainer{
     display:grid;
     grid-auto-flow: column;
@@ -255,7 +260,7 @@ h1{
 #instrumentsContainer{
     margin:1rem 1rem;
     display:grid;
-    width:min(1300px, 95%);
+    max-width:100%;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     justify-items: center;
     grid-gap:1rem;
