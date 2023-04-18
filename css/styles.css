@@ -189,15 +189,16 @@ div.abc{
 
 #galleryGrid{
     max-width:90vw;
-    height:100%;
     display:grid;
-    grid-template-columns:1fr;
+    grid-template-columns:repeat(auto-fit, minmax(350px, 1fr));
     margin:1.5rem;
     grid-gap:1rem;
     box-sizing:border-box;
 }
 
 #galleryGrid img{
+    object-fit: cover;
+    object-position: center;
     width:100%;
     height:100%;
 }
@@ -407,10 +408,6 @@ p.aboutUs{
 
     #closeMenuButton{
         display:none;
-    }
-
-    #galleryGrid{
-        grid-template-columns:1fr 1fr;
     }
 }
 
