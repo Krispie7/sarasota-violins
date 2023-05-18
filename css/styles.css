@@ -239,16 +239,17 @@ h1{
 }
 
 #instrumentsPageContainer{
+    display:flex;
+    flex-direction: column;
     width:100%;
     margin-bottom: 5rem;
+    align-items: center;
 }
 
 #instrumentsButtonsContainer{
     display:grid;
     grid-auto-flow: column;
     grid-gap:1.5rem;
-    margin:2rem auto;
-    padding:1.5rem;
 }
 
 .instrumentButton{
@@ -265,6 +266,8 @@ h1{
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     justify-items: center;
     grid-gap:1rem;
+    box-sizing: border-box;
+    padding:1rem;
 }
 
 .product{
@@ -324,6 +327,19 @@ h1{
     object-position: center;
 }
 
+/* ACCESSORIES PAGE*/
+
+#accessoriesContainer{
+    margin:1rem 1rem;
+    display:grid;
+    max-width:100%;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    justify-items: center;
+    grid-gap:1rem;
+    box-sizing: border-box;
+    padding:1rem;
+}
+
 /*About Us Page */
 
 p.aboutUs{
@@ -379,7 +395,7 @@ p.aboutUs{
 
 /* MEDIA QUERIES*/
 
-@media(min-width:1000px){
+@media(min-width:1000px){ /* desktop */
 
     .navbarButtons{
         display:block;
@@ -414,6 +430,13 @@ p.aboutUs{
 
     #closeMenuButton{
         display:none;
+    }
+
+    #accessoriesContainer{
+        margin: 2rem 10rem;
+    }
+    #instrumentsContainer{
+        margin: 2rem 10rem;
     }
 }
 
