@@ -247,7 +247,8 @@ h1{
     display:grid;
     grid-auto-flow: column;
     grid-gap:1.5rem;
-    margin:2rem 5rem;
+    margin:2rem auto;
+    padding:1.5rem;
 }
 
 .instrumentButton{
